@@ -1,0 +1,444 @@
+/*
+
+    Theme Name: Yu-kai Chou Theme
+    Theme URI: https://github.com/Amarnath1904/yukaichou-theme
+    Author: Amarnath Pandey
+    Author URI: amarnathpandey.tech
+    Description: A simple and clean theme for making yukai happy.
+    Version: 1.0
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,body{
+    background-color: #14171F;
+}
+
+
+.page-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-container{
+
+    background-color: #060C1B;
+
+    height: 765px;
+    max-width: 1400px;
+
+    display: grid;
+    grid-template-columns: repeat(14, 100px);
+    grid-template-rows: repeat(11, 69.69px);
+
+    background-image: url("./assets/background.jpg");
+
+    border-radius: 30px;
+
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.section-heading{
+    grid-column-start: 2;
+    grid-column-end: 15;
+
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.section-description{
+    grid-column-start: 2;
+    grid-column-end: 8;
+
+    grid-row-start: 4;
+    grid-row-end: 9;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    p{
+        font-size: 23px;
+    }
+}
+
+.section-visual{
+
+    grid-column-start: 9;
+    grid-column-end: 14;
+
+    grid-row-start: 4;
+    grid-row-end: 11;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    image{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+.section-cta{
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    grid-row-start: 10;
+    grid-row-end: 11;
+
+    button{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+.page-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-container{
+
+    background-color: #060C1B;
+
+    height: 765px;
+    max-width: 1400px;
+
+    display: grid;
+    grid-template-columns: repeat(14, 100px);
+    grid-template-rows: repeat(11, 69.69px);
+
+    background-image: url("./assets/background.jpg");
+
+    border-radius: 30px;
+
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.section-heading{
+    grid-column-start: 2;
+    grid-column-end: 15;
+
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    h1{
+
+        font-size: 45px;
+    }
+
+    h2{
+            
+            font-size: 30px;
+    }
+}
+
+.section-description{
+    grid-column-start: 2;
+    grid-column-end: 8;
+
+    grid-row-start: 4;
+    grid-row-end: 9;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    p{
+
+        font-weight: 400px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    text-align: justify;
+}
+
+.section-visual{
+
+    grid-column-start: 9;
+    grid-column-end: 14;
+
+    grid-row-start: 4;
+    grid-row-end: 11;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    image{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+.section-cta{
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    grid-row-start: 10;
+    grid-row-end: 11;
+
+    text-decoration: none;
+
+    button{
+        width: 100%;
+        height: 100%;
+
+        background-color: white;
+        color: black;
+        border: none;
+        outline: none;
+
+        border-radius: 10px;
+        font-size: large;
+    }
+
+}
+
+
+.site-header {
+    background-color: #0a0e1a; /* Dark background */
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    font-family: 'Poppins', sans-serif;
+
+    border-bottom: 2px solid white;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*  Site Logo Block */
+.site-logo {
+    display: flex;
+    align-items: center;
+}
+/* Site Logo Styling */
+.site-logo img {
+    height: 70px; /* Increase height */
+    width: auto; /* Keeps the aspect ratio */
+    max-height: 100px; /* Prevents it from getting too large */
+}
+
+
+/*  Navigation Menu */
+.main-menu {
+    display: flex;
+    gap: 20px;
+
+    width: 60%;
+    transition: transform 0.3s ease-in-out;
+}
+
+#menu-menu-by-amarnath-03-11-2024{
+
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+
+    li{
+        font-family: Poppins, sans-serif;
+        font-size: 18px;
+    }
+}
+
+.main-menu a {
+    color: #fff !important;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.main-menu.active {
+    transform: translateX(0);
+}
+
+/*  Contact Button */
+.contact-btn .btn {
+    background: linear-gradient(45deg, #5865f2, #8c52ff);
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.contact-btn .btn:hover {
+    background: linear-gradient(45deg, #8c52ff, #5865f2);
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.mobile_btn{
+    display: none;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+
+    .desktop_btn {
+        display: none; /* Hide in mobile view */
+    }
+    .mobile_btn {
+        display: block; /* Show in mobile view */
+    }
+
+
+    .section-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        padding: 50px 0px 20px 0px;
+
+        height: fit-content;
+        width: 98%;
+
+        div{
+            border-bottom: 10px;
+        }
+    }
+
+    .section-heading {
+        order: 1;
+        width: 90%;
+        text-align: center;
+
+        h1, h2{
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        line-height: 23px;
+        text-align: justify;
+        }
+    }
+
+    .section-visual {
+        order: 2;
+        width: 90%;
+        height: fit-content;
+        padding: 20px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .section-description {
+        order: 3;
+        p{
+            width: 100%;
+            padding: 0 20px;
+            text-align: left;
+            width: 400;
+            font-size: 15px;
+            line-height: 30px;
+        }
+    }
+
+    .section-cta {
+
+        margin-top: 20px;
+        order: 4;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button{
+            width: fit-content;
+            padding: 10px 20px;
+            height: 50px;
+        }
+
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .main-menu {
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        background-color: #0a0e1a;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: calc(100vh - 10vh);
+        transform: translateX(100%);
+        z-index: 1000;
+    }
+
+    .main-menu.active {
+        transform: translateX(0);
+    }
+
+    .contact-btn {
+        display: none; /* Hide in the navigation bar */
+    }
+
+    .main-menu .contact-btn {
+        display: flex; /* Show inside the hamburger menu */
+        margin-top: 20px;
+    }
+
+    .contact-btn {
+        margin-top: 20px;
+    }
+}

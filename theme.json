@@ -1,0 +1,91 @@
+{
+  "version": 3,
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "name": "Dark Background",
+          "slug": "dark-bg",
+          "color": "#14171F"
+        },
+        {
+          "name": "White",
+          "slug": "white",
+          "color": "#FFFFFF"
+        }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "Roboto",
+          "name": "Roboto",
+          "slug": "roboto",
+          "google": true
+        }
+      ],
+      "fontSizes": [
+        {
+          "name": "Small",
+          "slug": "small",
+          "size": "14px"
+        },
+        {
+          "name": "Medium",
+          "slug": "medium",
+          "size": "16px"
+        },
+        {
+          "name": "Large",
+          "slug": "large",
+          "size": "24px"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "text": "var(--wp--preset--color--white)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--roboto)"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--roboto)",
+          "fontWeight": "700"
+        }
+      },
+      "heading-1": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--roboto)",
+          "fontWeight": "600",
+          "fontSize": "45px",
+          "lineHeight": "60px",
+          "fontStyle": "normal"
+        },
+        "color": {
+          "text": "rgb(255, 255, 255)"
+        }
+      },
+      "paragraph": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--roboto)",
+          "fontWeight": "400"
+        }
+      },
+      "button": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--Inter-Tight)",
+          "fontWeight": "700",
+          "fontSize": "var(--wp--preset--font-size--large)"
+        }
+      },
+      "image": {
+        "width": "100%",
+        "height": "auto"
+      }
+    }
+  }
+}

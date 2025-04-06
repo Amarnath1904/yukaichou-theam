@@ -1,0 +1,38 @@
+/* General styles for both editors */
+body {
+    background-color: #14171F;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffffff; /* Ensure text is visible on dark background */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif;
+    color: #ffffff;
+}
+
+a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00bfff;
+    text-decoration: underline;
+}
+/* Block editor-specific styles */
+.wp-block {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.wp-block a {
+    color: #1e90ff;
+}
+
+.wp-block a:hover {
+    color: #00bfff;
+}
+
+
