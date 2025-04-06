@@ -92,11 +92,12 @@ get_header();
 
 <div class="blog-page">
     
-    <!-- Search Bar -->
     <div class="search-bar">
-        <input type="text" placeholder="Search Yu-kai's brain...." />
-        <button>Search</button>
+        <input type="text" id="search-input" placeholder="Search Yu-kai's brain...." />
     </div>
+
+    <!-- Search Results Container -->
+    <div class="blog-grid" id="search-results"></div>
     
     <!-- Blog Posts Grid -->
     <div class="blog-grid" id="blog-grid">
@@ -156,6 +157,29 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 })
                 .catch(error => console.error('Error:', error));
+        }
+    });
+
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    const blogGrid = document.getElementById('blog-grid');
+
+    searchInput.addEventListener('input', function () {
+        const query = searchInput.value.trim();
+
+        if (query.length > 2) { // Start searching after 3 characters
+            fetch(`<?php echo admin_url('admin-ajax.php'); ?>?action=search_posts&query=${query}`)
+                .then(response => response.text())
+                .then(data => {
+                    searchResults.innerHTML = data;
+                    searchResults.style.display = 'grid'; // Show search results
+                    blogGrid.style.display = 'none'; // Hide the default blog grid
+                })
+                .catch(error => console.error('Error:', error));
+        } else {
+            searchResults.innerHTML = ''; // Clear search results
+            searchResults.style.display = 'none'; // Hide search results
+            blogGrid.style.display = 'grid'; // Show the default blog grid
         }
     });
 });

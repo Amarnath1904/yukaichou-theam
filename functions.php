@@ -58,3 +58,43 @@ function load_more_posts() {
 
 add_action('wp_ajax_load_more_posts', 'load_more_posts');
 add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');
+
+add_action('wp_ajax_search_posts', 'search_posts');
+add_action('wp_ajax_nopriv_search_posts', 'search_posts');
+
+function search_posts() {
+    $search_query = isset($_GET['query']) ? sanitize_text_field($_GET['query']) : '';
+
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => 10,
+        's' => $search_query,
+    );
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            ?>
+            <div class="blog-item">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="blog-image">
+                        <?php if (has_post_thumbnail()) {
+                            the_post_thumbnail('medium');
+                        } ?>
+                    </div>
+                    <div class="blog-title">
+                        <h3><?php the_title(); ?></h3>
+                    </div>
+                </a>
+            </div>
+            <?php
+        }
+    } else {
+        echo '<p>No results found.</p>';
+    }
+
+    wp_reset_postdata();
+    wp_die();
+}

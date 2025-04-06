@@ -33,6 +33,7 @@
 
         <!-- Navigation Menu -->
         <nav class="main-menu">
+            <div class="close-menu" onclick="toggleMenu()">&#10005;</div> <!-- Add close button -->
             <?php
             wp_nav_menu(array(
                 'menu' => 'Menu by Amarnath 03-11-2024',
@@ -54,9 +55,7 @@
 <script>
     function toggleMenu() {
         const menu = document.querySelector('.main-menu');
-
         menu.classList.toggle('active');
-
     }
 </script>
 
